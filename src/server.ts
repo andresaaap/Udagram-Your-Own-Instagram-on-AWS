@@ -27,7 +27,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
   // RETURNS
   //   the filtered image file [!!TIP res.sendFile(filteredpath); might be useful]
 
-function validateURL(pURL) {
+function validateURL(pURL: string) {
   var regexQuery = "^(https?://)?(www\\.)?([-a-z0-9]{1,63}\\.)*?[a-z0-9][-a-z0-9]{0,61}[a-z0-9]\\.[a-z]{2,6}(/[-\\w@\\+\\.~#\\?&/=%]*)?$";
   var url = new RegExp(regexQuery,"i");
   return url.test(pURL);
